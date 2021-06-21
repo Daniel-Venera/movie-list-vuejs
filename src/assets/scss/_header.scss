@@ -1,0 +1,15 @@
+.header {
+	padding: 30px;
+	text-align: right;
+	input {
+		border: 2px solid $turquoise;
+		width: 100%;
+		max-width: 400px;
+		border-radius: 26px;
+		padding: 8px 0 6px 15px;
+		font-size: 18px;
+		outline: none;
+		color: $turquoise;
+		background-color: $darkBlue;
+	}
+}

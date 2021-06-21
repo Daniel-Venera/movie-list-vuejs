@@ -1,0 +1,38 @@
+.card {
+	&__img{
+		height: 500px;
+	    background-size: cover !important;
+		border-radius: 20px 20px 0 0 ;
+	}
+	&__body {
+		padding: 16px 0px 16px 8px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		background-color: $purple;
+		height: calc(100% - 500px);
+	}
+	&__title{
+		color: white;
+		font-weight: 500;
+		font-size: 18px;
+		padding-right: 10px;
+	}
+	&__average{
+		padding: 8px;
+		background-color: $darkBlue;
+		border-radius: 6px;
+		font-weight: 700;
+		min-width: 34px;
+		text-align: center;
+		&Note--green{
+			color: $green;
+		}
+		&Note--orange{
+			color: $orange;
+		}
+		&Note--red{
+			color: $red;
+		}
+	}
+}

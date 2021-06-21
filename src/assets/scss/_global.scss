@@ -1,0 +1,18 @@
+$lightBlue: #83CFDF;
+$purple: #292847;
+$turquoise: #13688C;
+$darkBlue: #1e1f33;
+$grey: #EBE5E2;
+$green: #87c04d;
+$orange: #f28804;
+$red: #e93807;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+}
+body {
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	background-color: $darkBlue;
+}
