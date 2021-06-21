@@ -24,7 +24,7 @@
 		</div>	
 		<div v-else>
 			<h2 class="title">
-				Aucun résultat pour "{{precedentSearchQuery}}"
+				Aucun résultat pour "{{searchQuery}}"
 			</h2>
 		</div>
 	</div>
@@ -38,12 +38,19 @@ export default {
 			searchUrl: 'https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=',
 			movieList: [],
 			searchQuery: "",
-			precedentSearchQuery: "",
 			latest: true,
 		}
 	},
 	mounted(){
 		this.searchForm(this.apiUrl)
+	},
+	watch:{
+		searchQuery: function(){
+			console.log(this.searchQuery);
+			if (this.searchQuery !== null){
+				this.searchForm(this.searchUrl + this.searchQuery)
+			}
+		}
 	},
 	methods: {
 		searchForm(url){
@@ -59,7 +66,6 @@ export default {
 				this.latest = true
 			}
 			)
-			this.precedentSearchQuery = this.searchQuery
 		},
 		classAverage(average){
 			if (average>=8){
